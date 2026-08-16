@@ -271,7 +271,7 @@ int nxbe_configure(FAR NX_DRIVERTYPE *dev, FAR struct nxbe_state_s *be)
           be->plane[i].dev.copyrectangle  = nxgl_copyrectangle_32bpp;
 
 #ifdef CONFIG_NX_RAMBACKED
-          be->plane[i].pwfb.setpixel      = pwfb_setpixel_1bpp;
+          be->plane[i].pwfb.setpixel      = pwfb_setpixel_32bpp;
           be->plane[i].pwfb.fillrectangle = pwfb_fillrectangle_32bpp;
           be->plane[i].pwfb.getrectangle  = pwfb_getrectangle_32bpp;
           be->plane[i].pwfb.filltrapezoid = pwfb_filltrapezoid_32bpp;
